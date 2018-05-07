@@ -1,0 +1,74 @@
+@import "../modules/_vars.scss";
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background-image: url(../img/banner-bg.jpg);
+  background-size: cover;
+  background-position: left center;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .main-title {
+    font-size: 2.25rem;
+    padding: 40px 0;
+    line-height: 1;
+    border: 1px solid rgba($white, 0.3);
+    border-width: 1px 0;
+    margin: 0;
+  }
+  .sub-title {
+    font-size: 1rem;
+    font-family: $body-font;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  .main-cta {
+    background: transparent;
+    border: 1px solid rgba($white, 0.3);
+    height: 43px;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    position: absolute;
+    bottom: 12.5%;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    .main-title {}
+    .sub-title {
+      font-size: 1rem;
+      font-family: $body-font;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .banner {
+    .main-title {
+      font-size: 3rem;
+    }
+    .sub-title {
+      font-size: 1.25rem;
+    }
+    .main-cta {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .banner {
+    .main-title {
+      font-size: 4rem;
+    }
+  }
+}
