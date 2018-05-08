@@ -9,6 +9,7 @@
     <meta name="keywords" content="test, task, front-end, coding">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/nouislider.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500|Playfair+Display" rel="stylesheet">
   </head>
   <body>
@@ -100,19 +101,142 @@
       </div>
       <!-- search bar ends -->
 
+      <!-- filters -->
+      <div class="filters container">
+        <div class="filter-main">
+          <span class="filter-tag checked">Residential</span>
+          <span class="filter-tag checked">Kolkata</span>
+        </div>
+        <div class="form-desktop">
+          <button class="filter-buttons form-reset"><img class="reset-img" src="assets/img/reset-orange.png"> Reset</button>
+          <button class="filter-buttons form-apply">Apply Filters</button>
+        </div>
+        <div class="clear bordered"></div>
+        <div class="filter-section">
+          <h2 class="section-title">Filters</h2>
+          <div class="filter status">
+            <h3 class="filter-title">Project Status</h3>
+            <span class="filter-tag checked">Completed</span>
+            <span class="filter-tag">Under construction</span>
+            <span class="filter-tag checked">Ready to occupy</span>
+          </div>
+          <div class="filter bhk">
+            <h3 class="filter-title">BHK</h3>
+            <span class="filter-tag">1 BHK</span>
+            <span class="filter-tag checked">2 BHK</span>
+            <span class="filter-tag">3 BHK</span>
+            <span class="filter-tag">4 BHK</span>
+          </div>
+          <div class="clear"></div>
+          <div class="filter budget">
+            <h3 class="filter-title">Approximate Budget</h3>
+            <div id="budget-slider"></div>
+          </div>
+          <div class="form-row">
+            <button class="filter-buttons form-reset"><img class="reset-img" src="assets/img/reset-orange.png"> Reset</button>
+            <button class="filter-buttons form-apply">Apply Filters</button>
+          </div>
+        </div>
+      </div>
+      <!-- filters ends -->
+
+      <!-- listing -->
+      <div class="listings">
+        <div class="container">
+          <ul class="listing-items">
+            <li class="listing-item">
+              <img class="listing-thumb" src="assets/img/thumb1.jpg">
+              <div class="listing-details">
+                <h3 class="listing-title">Equinox</h3>
+                <p class="type">2, 3 BHK apartments</p>
+                <p class="location">New Town, Kolkata</p>
+                <span class="price"><span class="emph">&#8377; 50 Lakhs</span> onwards</span>
+              </div>
+            </li>
+            <li class="listing-item">
+              <img class="listing-thumb" src="assets/img/thumb2.jpg">
+              <div class="listing-details">
+                <h3 class="listing-title">Mahjergaon</h3>
+                <p class="type">2, 3 BHK apartments</p>
+                <p class="location">New Town, Kolkata</p>
+                <span class="price"><span class="emph">&#8377; 50 Lakhs</span> onwards</span>
+              </div>
+            </li>
+            <li class="listing-item">
+              <img class="listing-thumb" src="assets/img/thumb3.jpg">
+              <div class="listing-details">
+                <h3 class="listing-title">Panache</h3>
+                <p class="type">2, 3 BHK apartments</p>
+                <p class="location">New Town, Kolkata</p>
+                <span class="price"><span class="emph">&#8377; 50 Lakhs</span> onwards</span>
+              </div>
+            </li>
+            <li class="listing-item">
+              <img class="listing-thumb" src="assets/img/thumb4.jpg">
+              <div class="listing-details">
+                <h3 class="listing-title">Vyom</h3>
+                <p class="type">2, 3 BHK apartments</p>
+                <p class="location">New Town, Kolkata</p>
+                <span class="price"><span class="emph">&#8377; 50 Lakhs</span> onwards</span>
+              </div>
+            </li>
+          </ul>
+          <div class="map-container"></div>
+        </div>
+      </div>
+      <!-- listing ends -->
+
+      <!-- subscribe -->
+      <div class="subscribe">
+        <h2 class="section-title">Stay updated about Projects</h2>
+        <p class="subscribe-text">Announcements, Launch information, Offers etc</p>
+        <form class="subscribe-form">
+          <input type="text" class="sub-field" id="sub-email" name="sub-email" placeholder="Enter your email to stay updated">
+          <button type="submit" class="sub-field">Submit</button>
+        </form>
+      </div>
+      <!-- subscribe ends -->
+
+      <!-- contact -->
+      <div class="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 contact-col">
+              <h3 class="col-title">Mail</h3>
+              <p class="col-text">info@psgroup.com</p>
+            </div>
+            <div class="col-sm-4 contact-col">
+              <h3 class="col-title">Call</h3>
+              <p class="col-text">info@psgroup.com</p>
+            </div>
+            <div class="col-sm-4 contact-col">
+              <h3 class="col-title">Social</h3>
+              <p class="col-text">
+                <a class="social-link" href="#"><img src="assets/img/social-fb.png"></a>
+                <a class="social-link" href="#"><img src="assets/img/social-twitter.png"></a>
+                <a class="social-link" href="#"><img src="assets/img/social-linkedin.png"></a>
+                <a class="social-link" href="#"><img src="assets/img/social-youtube.png"></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- contact ends -->
 
       <!-- footer -->
-      <footer class="page-footer container">
-        <div class="col-sm-3 col-md-2">
-          <img src="assets/img/footer-logo.png" height="24" width="121" class="footer-logo">
-        </div>
-        <div class="col-sm-6 col-md-8"><p class="foot-note">&copy; Factspan 2002 - 2017. All rights reserved.</p></div>
-        <div class="col-sm-3 col-md-2 social">
-          <nav class="social-nav">
-            <a href="http://twitter.com" class="social-links"><img src="assets/img/twitter.png"></a>
-            <a href="http://facebook.com" class="social-links"><img src="assets/img/facebook.png"></a>
-            <a href="http://instagram.com" class="social-links"><img src="assets/img/instagram.png"></a>
-          </nav>
+      <footer class="page-footer">
+        <div class="container">
+          <div class="col-sm-9 col-md-10">
+            <nav class="footer-nav">
+              <a class="footer-links" href="#/a">Disclaimer</a>
+              <a class="footer-links" href="#/a">Privacy Policy</a>
+              <a class="footer-links" href="#/a">Terms of Use</a>
+              <a class="footer-links">&copy; 2017 PS Group</a>
+            </nav>
+          </div>
+          <div class="col-sm-3 col-md-2">
+            <img src="assets/img/lollypop-logo.png" height="22" width="15" class="footer-logo"> <span class="credit">Crafted by Lollypop</span>
+          </div>
         </div>
       </footer>
       <!-- footer ends -->
@@ -120,7 +244,8 @@
     </div>
     <!-- main wrapper ends -->
     <script src="assets/components/jquery/jquery.min.js"></script>
-    <!-- <script src="assets/components/hammer/hammer.min.js"></script> -->
+    <script src="assets/components/slider/nouislider.min.js"></script>
+    <script src="assets/components/slider/wNumb.js"></script>
     <script src="assets/js/scripts.js"></script>
   </body>
 </html>

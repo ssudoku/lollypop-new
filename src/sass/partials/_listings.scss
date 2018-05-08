@@ -1,0 +1,119 @@
+@import "../modules/_vars.scss";
+
+.listings {
+  margin: 30px 0;
+  .container {
+    padding: 10px;
+  }
+  .map-container {
+    display: none;
+  }
+  .listing-items {
+    padding: 0;
+    margin: 0;
+  }
+  .listing-item {
+    display: flex;
+    list-style-type: none;
+    border-bottom: 1px solid rgba($grey, 0.35);
+    padding: 20px 0;
+    &:last-of-type {
+      border: 0;
+      padding-bottom: 0;
+    }
+    &:first-of-type {
+      padding-top: 0;
+    }
+  }
+  .listing-thumb {
+    height: 110px;
+    display: block;
+    margin-right: 28px;
+  }
+  .listing-details {
+    position: relative;
+    flex-grow: 1;
+    .listing-title {
+      color: $dark-blue;
+      font-size: 1.5rem;
+      margin: -4px 0 10px 0;
+      line-height: 1;
+    }
+    .type, .location {
+      margin: 0;
+      font-size: 0.875rem;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+    .type {
+      color: $grey-text;
+    }
+    .location {
+      color: $dark;
+    }
+    .price {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      color: $grey-text;
+      font-size: 0.875rem;
+      font-weight: 300;
+      line-height: 1;
+      .emph {
+        font-size: 1.125rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .listings {
+    margin: 40px 0;
+    background: $grey;
+    position: relative;
+    .container {
+      padding: 0 15px;
+    }
+    .listing-items {
+      background: white;
+      padding: 30px;
+      max-width: 380px;
+      box-shadow: 0 0 15px 4px rgba($dark, 0.09);
+      position: relative;
+      z-index: 99;
+    }
+    .listing-item {
+      padding: 30px 0;
+    }
+    .map-container {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border: 20px solid $white;
+      border-width: 20px 0;
+      z-index: 11;
+      background: url(../img/map.jpg);
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .listings {
+    margin: 60px 0;
+    .map-container {
+      border-width: 60px 0;
+    }
+    .listing-items {
+      padding: 40px;
+    }
+    .listing-item {
+      padding: 40px 0;
+    }
+  }
+}

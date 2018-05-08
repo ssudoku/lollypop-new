@@ -1,15 +1,31 @@
 .page-footer {
-  padding: 80px 0 40px 0;
-  .foot-note {
-    margin: 0;
-    line-height: 1;
+  background: $light;
+  padding: 30px 0 40px 0;
+  .credit {
+    color: #FF4455;
+    font-size: 0.875rem;
   }
-  .social-nav {
+  .credit, .footer-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 30px;
+  }
+  .footer-links {
+    color: $grey;
+    font-size: 0.875rem;
+    margin: 0 15px 15px 0;
     display: block;
-    text-align: right;
-    padding-right: 15px;
   }
-  .social-links {
-    margin-left: 20px;
+}
+
+@media screen and (min-width:768px) {
+  .page-footer {
+    .credit, .footer-logo {
+      margin-top: 0;
+    }
+    .footer-links {
+      display: inline;
+      margin: 0 15px 0 0;
+    }
   }
 }

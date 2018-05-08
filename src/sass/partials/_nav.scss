@@ -5,11 +5,27 @@
 }
 
 .topnav {
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 999;
+  &.sticky {
+    position: fixed;
+    background: rgba($dark-blue, 0.85);
+    .topnav-inner {
+      padding: 15px 20px;
+    }
+    .topnav-logo {
+      height: 20px;
+    }
+    .sidenav-toggle {
+      img {
+        height: 16px;
+        width: auto;
+      }
+    }
+  }
   .topnav-inner {
     padding: 20px;
     @extend .clear
@@ -139,6 +155,21 @@
     }
     .sidenav-toggle {
       height: 36px;
+    }
+    &.sticky {
+      .topnav-inner {
+        padding: 15px 20px;
+      }
+      .topnav-logo {
+        height: 30px;
+        margin-top: -2px;
+      }
+      .sidenav-toggle {
+        img {
+          height: 20px;
+          width: auto;
+        }
+      }
     }
   }
 }

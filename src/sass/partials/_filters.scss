@@ -1,0 +1,194 @@
+@import "../modules/_vars.scss";
+
+.filters {
+  padding: 10px;
+  .form-desktop {
+    display: none;
+  }
+  .filter-tag {
+    display: inline-block;
+    border-radius: 2px;
+    padding: 8px 12px;
+    margin: 0 10px 10px 0 ;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1;
+    border: 1px solid $grey;
+    color: $grey;
+    letter-spacing: 0.5px;
+    &.checked {
+      color: $white;
+      background: $orange;
+      border: 0;
+    }
+  }
+  .filter-main .filter-tag {
+    &:after {
+      content: "";
+      display: inline-block;
+      margin-left: 10px;
+      width: 9px;
+      height: 9px;
+      background: url(../img/cross-white.png);
+      background-size: contain;
+    }
+  }
+  .filter-section {
+    padding: 10px;
+    border: 1px solid $grey;
+    border-radius: 4px;
+  }
+  .filter-title {
+    color: $dark;
+    font-family: $body-font;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  .filter {
+    border-bottom: 1px solid rgba($grey, 0.35);
+  }
+  .form-row {
+    padding-top: 20px;
+    text-align: center;
+  }
+  .filter-buttons {
+    background: transparent;
+    border: 0;
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  .reset-img {
+    height: 12px;
+    width: auto;
+    margin-right: 5px;
+  }
+  .form-reset {
+    color: $orange;
+  }
+  .form-apply {
+    color: $dark-blue;
+  }
+
+  // Slider CSS over-rides
+  .noUi-horizontal {
+    height: 1px;
+    margin-bottom: 80px;
+  }
+  .noUi-target {
+    background: $grey;
+    border: 0;
+    box-shadow: none;
+    position: relative;
+    &:before, &:after {
+      content: "";
+      height: 3px;
+      width: 3px;
+      position: absolute;
+      top: -1px;
+      border-radius: 50%;
+      background: $grey;
+    }
+    &:before {
+      left: -1px;
+    }
+    &:after {
+      right: -1px;
+    }
+  }
+  .noUi-connect {
+    background: $orange;
+  }
+  #budget-slider.noUi-horizontal .noUi-handle {
+    width: 7px;
+    right: -3px;
+    top: -12px;
+    height: 24px;
+  }
+  .noUi-handle {
+    background: $orange;
+    border-radius: 18px;
+    border: 0;
+    box-shadow: none;
+    &:before, &:after {
+      content: none;
+    }
+  }
+  .noUi-pips-horizontal {
+    padding: 3px 0;
+  }
+  .noUi-value-horizontal {
+    -webkit-transform: translate(-50%,125%);
+    transform: translate(-50%,125%);
+    color: $grey;
+    font-size: 0.75rem;
+    font-weight: 300;
+  }
+  .noUi-marker-normal {
+    display: none;
+  }
+  .noUi-marker-horizontal.noUi-marker-large {
+    height: 8px;
+    background: $orange;
+  }
+  .noUi-marker-horizontal.noUi-marker {
+    width: 1px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .filters {
+    padding: 0 15px 10px 0;
+    .filter-section {
+      border: 0;
+      padding: 0;
+    }
+    .filter-tag {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+    .section-title {
+      display: none;
+    }
+    .form-row {
+      display: none;
+    }
+    .filter {
+      border: 0;
+      margin: 20px 0;
+    }
+    .filter-title {
+      margin-bottom: 1.5rem;
+    }
+    .filter-main, .form-desktop, .filter.status, .filter.bhk {
+      width: 50%;
+      float: left;
+    }
+    .clear.bordered {
+      border-bottom: 1px solid rgba($grey, 0.35)
+    }
+    .form-desktop {
+      display: block;
+      text-align: right;
+      .form-apply {
+        background: $dark-blue;
+        color: $white;
+        padding: 15px 20px;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .filters {
+    .filter.status {
+      width: 65%;
+    }
+    .filter.bhk {
+      width: 35%;
+    }
+  }
+}
